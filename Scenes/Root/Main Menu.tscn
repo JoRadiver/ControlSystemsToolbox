@@ -30,13 +30,13 @@ align = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 18.0
 margin_right = 933.0
-margin_bottom = 267.0
+margin_bottom = 255.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="button_rocket1" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 margin_right = 308.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
@@ -45,7 +45,7 @@ expand = true
 [node name="button_rocket2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 margin_left = 312.0
 margin_right = 620.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
@@ -54,22 +54,22 @@ expand = true
 [node name="button_Template" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 margin_left = 624.0
 margin_right = 933.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
 expand = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 271.0
+margin_top = 259.0
 margin_right = 933.0
-margin_bottom = 520.0
+margin_bottom = 496.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="button_dPendulum" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 margin_right = 308.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
@@ -78,7 +78,7 @@ expand = true
 [node name="button_invPendulum" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 312.0
 margin_right = 620.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
@@ -87,11 +87,19 @@ expand = true
 [node name="button_segway" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 624.0
 margin_right = 933.0
-margin_bottom = 249.0
+margin_bottom = 237.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )
 expand = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 449.0
+margin_top = 500.0
+margin_right = 484.0
+margin_bottom = 520.0
+size_flags_horizontal = 4
+text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/button_rocket1" to="." method="_on_button_rocket1_pressed" binds= [ false, Color( 0, 0, 0, 1 ) ]]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/button_rocket2" to="." method="_on_button_rocket2_pressed"]
@@ -99,3 +107,4 @@ expand = true
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_dPendulum" to="." method="_on_button_dPendulum_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_invPendulum" to="." method="_on_button_invPendulum_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_segway" to="." method="_on_button_segway_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
