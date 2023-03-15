@@ -1,3 +1,13 @@
 [gd_scene format=2]
 
 [node name="Rocket1" type="Node2D"]
+
+[node name="Rocket" type="KinematicBody2D" parent="."]
+
+[node name="Top" type="Sprite" parent="Rocket"]
+
+[node name="Nozzle" type="Sprite" parent="Rocket"]
+
+[node name="Flame" type="Sprite" parent="Rocket"]
+
+[node name="Camera2D" type="Camera2D" parent="Rocket"]

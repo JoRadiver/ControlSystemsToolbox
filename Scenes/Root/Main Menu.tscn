@@ -1,17 +1,110 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textures/UI/mode1.png" type="Texture" id=1]
+[ext_resource path="res://Textures/UI/menu_background.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/UI/Main Menu.gd" type="Script" id=3]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511, 307 )
+scale = Vector2( 0.592698, 0.587462 )
+texture = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1023.0
-margin_bottom = 597.0
+margin_left = 42.0
+margin_top = 45.0
+margin_right = 975.0
+margin_bottom = 565.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 933.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Main Menu"
+align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1023.0
+margin_top = 18.0
+margin_right = 933.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="button_rocket1" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 308.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="button_rocket2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 312.0
+margin_right = 620.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="button_Template" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 624.0
+margin_right = 933.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 4.0
-margin_right = 1023.0
-margin_bottom = 4.0
+margin_top = 259.0
+margin_right = 933.0
+margin_bottom = 496.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="button_dPendulum" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 308.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="button_invPendulum" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 312.0
+margin_right = 620.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="button_segway" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 624.0
+margin_right = 933.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 449.0
+margin_top = 500.0
+margin_right = 484.0
+margin_bottom = 520.0
+size_flags_horizontal = 4
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/button_rocket1" to="." method="_on_button_rocket1_pressed" binds= [ false, Color( 0, 0, 0, 1 ) ]]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/button_rocket2" to="." method="_on_button_rocket2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/button_Template" to="." method="_on_button_Template_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_dPendulum" to="." method="_on_button_dPendulum_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_invPendulum" to="." method="_on_button_invPendulum_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/button_segway" to="." method="_on_button_segway_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
