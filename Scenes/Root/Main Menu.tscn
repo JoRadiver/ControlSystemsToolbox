@@ -1,17 +1,74 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Textures/UI/mode1.png" type="Texture" id=1]
+[ext_resource path="res://Textures/UI/menu_background.png" type="Texture" id=2]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511, 307 )
+scale = Vector2( 0.592698, 0.587462 )
+texture = ExtResource( 2 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 42.0
+margin_top = 45.0
 margin_right = 1023.0
 margin_bottom = 597.0
 
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 981.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Main Menu"
+align = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1023.0
+margin_top = 18.0
+margin_right = 981.0
+margin_bottom = 283.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 488.0
+margin_bottom = 265.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 492.0
+margin_right = 981.0
+margin_bottom = 265.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 4.0
-margin_right = 1023.0
-margin_bottom = 4.0
+margin_top = 287.0
+margin_right = 981.0
+margin_bottom = 552.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 488.0
+margin_bottom = 265.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 492.0
+margin_right = 981.0
+margin_bottom = 265.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
